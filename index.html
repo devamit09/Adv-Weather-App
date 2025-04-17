@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Check current and 5-day weather forecast for any city">
+    <title>Advanced Weather App</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main container -->
+    <div class="container">
+        <div class="card">
+            <!-- Header section with title and unit toggle -->
+            <div class="header">
+                <h1>Weather Forecast</h1>
+                <!-- Buttons to toggle temperature units -->
+                <div class="unit-toggle">
+                    <button id="unitC" class="active">°C</button>
+                    <button id="unitF">°F</button>
+                </div>
+            </div>
+
+            <!-- Search section -->
+
+            <div class="search-container">
+                <div class="search">
+                    <!-- Text input to enter city name -->
+                    <input 
+                        type="text" 
+                        id="cityInput" 
+                        placeholder="Enter city name" 
+                        spellcheck="false"
+                        aria-label="City name input"
+                    >
+
+                    <!-- Button to search city weather -->
+                    <button id="searchBtn" aria-label="Search weather">   
+                        <!-- <i class="wi wi-search"></i> -->
+                        <img src="images/search.png" alt="Search icon">
+                    </button>
+
+                     <!-- Button to use user's current location -->
+                    <button id="locationBtn" aria-label="Use my location">
+                        <!-- <i class="wi wi-gps"></i> -->
+                        <img src="images/location.png" alt="Location icon">
+                    </button>
+                </div>
+            </div>
+ 
+            <!-- Error message area (hidden by default) -->
+            <div class="error" role="alert">
+                <p><i class="wi wi-alert"></i> <span id="errorText">Invalid city name</span></p>
+            </div>
+
+            <!-- Loading spinner (shown while fetching data) -->
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Current weather display -->
+            <div class="current-weather">
+                <div class="weather-main">
+                    <!-- Weather icon -->
+                    <div class="weather-icon-container">
+                        <i id="currentWeatherIcon" class="wi wi-day-sunny"></i>
+                    </div>
+                    <div class="temp-container">
+                        <h2 id="currentTemp">--</h2>
+                        <div id="unitDisplay" class="unit-display">°C</div>
+                    </div>
+                </div>
+                
+                <!-- Other weather details like humidity, wind, etc. -->
+                <div class="weather-details">
+                    <h3 id="currentCity">Search for a city</h3>
+                    <p id="currentDescription">--</p>
+                    
+                    <!-- Grid layout for detailed weather info -->
+                    <div class="detail-grid">
+                        <!-- Humidity -->
+                        <div class="detail-item">
+                            <i class="wi wi-humidity"></i>
+                            <span id="humidity">--%</span>
+                            <p>Humidity</p>
+                        </div>
+
+                        <!-- Wind -->
+                        <div class="detail-item">
+                            <i class="wi wi-strong-wind"></i>
+                            <span id="wind">-- km/h</span>
+                            <p>Wind</p>
+                        </div>
+
+                        <!-- Pressure -->
+                        <div class="detail-item">
+                            <i class="wi wi-barometer"></i>
+                            <span id="pressure">-- hPa</span>
+                            <p>Pressure</p>
+                        </div>
+
+                        <!-- Sunrise time -->
+                        <div class="detail-item">
+                            <i class="wi wi-sunrise"></i>
+                            <span id="sunrise">--:--</span>
+                            <p>Sunrise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-day forecast section -->
+            <div class="forecast">
+                <h3>5-Day Forecast</h3>
+
+                
+                <div class="forecast-container" id="forecastContainer">
+                    <!-- Forecast items will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+                <!-- Footer section -->
+        <footer>
+            <div class="footer-content">
+                <p>© <span id="currentYear"></span> Weather App made by &#129505;Amit</p>
+                <div class="footer-links">
+                    <a href="#" target="_blank" rel="noopener">Privacy</a>
+                    <a href="#" target="_blank" rel="noopener">Terms</a>
+                    <a href="https://github.com/devamit09/Adv-Weather-App" target="_blank" rel="noopener">
+                        <i class="wi wi-github"></i> Source
+                    </a>
+                </div>
+                <p class="api-credit">Weather data by OpenWeatherMap</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

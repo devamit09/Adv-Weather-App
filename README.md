@@ -1,6 +1,6 @@
 # 🌤️ Advanced Weather Forecast App
 
-![Weather App Preview](images/screenshot.png) <!-- Replace with actual screenshot file -->
+![Weather App Preview](images/Screenshot.png) <!-- Replace with actual screenshot file -->
 
 A sleek, responsive weather application that provides real-time weather data and 5-day forecasts for any location worldwide.
 
@@ -25,7 +25,7 @@ A sleek, responsive weather application that provides real-time weather data and
 ## 🚀 Quick Start
 
 1. **Live Demo**:  
-   [View App](https://yourusername.github.io/Adv-Weather-App/)
+   [View App](https://devamit09.github.io/Adv-Weather-App/)
 
 2. **Run Locally**:
    ```bash
@@ -41,6 +41,7 @@ A sleek, responsive weather application that provides real-time weather data and
 📸 App Preview
 Current Weather View	5-Day Forecast View
 Current Weather	Forecast
+
 🌟 Highlights
 Modern UI Design: Glassmorphism effect with blur and transparency
 
